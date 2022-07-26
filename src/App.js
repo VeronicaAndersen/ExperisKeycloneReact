@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import NavBar from './Components/NavBar/NavBar';
+import Login from './View/Login/Login';
+import Profile from './View/Profile/Profile';
+
+import KeycloakRoute from "./Routes/KeycloakRoute";
+import { ROLES } from "./Const/roles";
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route
+            path="/profile"
+            element={
+              <KeycloakRoute role={ ROLES.User }>
+                <Profile />
+              </KeycloakRoute>
+            }
+          />
+
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
