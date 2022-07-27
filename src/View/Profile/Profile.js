@@ -1,4 +1,4 @@
-
+import Spotify from "../../Components/Spotify/Spotify"
 
 
 const Profile = () => {
@@ -6,6 +6,7 @@ const Profile = () => {
     return (
         <>
             <h1>Profile</h1>
+            <Spotify />
         </>
     )
 }

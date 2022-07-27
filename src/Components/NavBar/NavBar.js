@@ -14,22 +14,14 @@ const NavBar = () => {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/spotify">Spotify</Link>
+                                <Link to="/profile">Spotify</Link>
                             </li>
-                            {keycloak.authenticated && (
+                            {/* {keycloak.authenticated && (
                                 <li>
                                     <Link to="/profile" id="profileLink">Profile</Link>
                                 </li>
-                            )}
+                            )} */}
                         </ul>
-
-                        {keycloak.authenticated && (
-                            <ul>
-                                <li>
-                                    <button onClick={() => keycloak.logout()}>Logout</button>
-                                </li>
-                            </ul>
-                        )}
                     </div>
                 </div>
             </nav>
