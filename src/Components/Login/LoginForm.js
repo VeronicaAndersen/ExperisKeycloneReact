@@ -1,4 +1,4 @@
-import keycloak from "../../keycloak";
+import keycloak from "../../Keycloak/keycloak";
 
 const LoginForm = () => {
     return (
@@ -15,16 +15,13 @@ const LoginForm = () => {
                         <button onClick={() => keycloak.login()}>Login</button>
                     )}
                     {keycloak.authenticated && (
+                        <button onClick={showToken()}>Token</button>
+                    )}
+                    {keycloak.authenticated && (
                         <button onClick={() => keycloak.logout()}>Logout</button>
                     )}
+                    
                 </section>
-
-                {keycloak.token && (
-                    <div>
-                        <h4>Token</h4>
-                        <pre>{keycloak.token}</pre>
-                    </div>
-                )}
             </div>
 
         </>
@@ -32,3 +29,7 @@ const LoginForm = () => {
 
 }
 export default LoginForm;
+
+function showToken() {
+    console.log(keycloak.tokenParsed);
+}

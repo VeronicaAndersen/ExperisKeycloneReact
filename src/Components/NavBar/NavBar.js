@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import keycloak from "../../keycloak";
+import keycloak from "../../Keycloak/keycloak";
 
 const NavBar = () => {
 
@@ -13,14 +13,11 @@ const NavBar = () => {
                             <li>
                                 <Link to="/">Home</Link>
                             </li>
-                            <li>
-                                <Link to="/profile">Spotify</Link>
-                            </li>
-                            {/* {keycloak.authenticated && (
+                            {keycloak.authenticated && (
                                 <li>
                                     <Link to="/profile" id="profileLink">Profile</Link>
                                 </li>
-                            )} */}
+                            )}
                         </ul>
                     </div>
                 </div>

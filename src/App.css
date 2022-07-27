@@ -6,7 +6,8 @@
 
 * {
   margin: 0;
-  font-family: 'Montserrat'
+  font-family: 'Montserrat';
+  text-align: center
 }
 
 html {
@@ -18,7 +19,7 @@ html {
 .header {
   background-color: #fff;
   width: 100vw;
-  height: 120px;
+  height: fit-content;
   line-height: 60px;
   box-shadow: var(--shadow);
   display: flex;
@@ -44,7 +45,7 @@ li {
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 30vh;
+  margin-top: 20vh;
   margin-right: 0;
   text-decoration: none;
   color: #fff;
@@ -83,6 +84,7 @@ button::before {
   border-width: 2px 0 0 2px;
   border-color: var(--secondary);
 }
+
 button::after {
   bottom: -15px;
   right: -15px;
@@ -90,7 +92,19 @@ button::after {
   border-color: var(--secondary);
 }
 
-button:hover::before, button:hover::after{
-width: calc(100% + 27px);
-height: calc(100% + 27px);
+button:hover::before,
+button:hover::after {
+  width: calc(100% + 27px);
+  height: calc(100% + 27px);
+}
+
+.loading {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  margin: auto auto;
+  margin-top: 300px;
 }
