@@ -7,9 +7,6 @@ import Profile from './View/Profile/Profile';
 import KeycloakRoute from "./Routes/KeycloakRoute";
 import { ROLES } from "./Const/roles";
 
-
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -20,12 +17,11 @@ function App() {
           <Route
             path="/profile"
             element={
-              <KeycloakRoute role={ ROLES.User }>
+              <KeycloakRoute role={ROLES.User}>
                 <Profile />
               </KeycloakRoute>
             }
           />
-
         </Routes>
       </div>
     </BrowserRouter>

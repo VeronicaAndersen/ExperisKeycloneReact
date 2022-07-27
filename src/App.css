@@ -19,8 +19,8 @@ html {
 .header {
   background-color: #fff;
   width: 100vw;
-  height: fit-content;
-  line-height: 60px;
+  height: 70px;
+  line-height: 30px;
   box-shadow: var(--shadow);
   display: flex;
   justify-content: center;
@@ -34,28 +34,22 @@ a {
 }
 
 a:hover {
-  border-bottom: 2mm ridge #84f7e999;
-  padding: 10px 50px;
-}
-
-li {
-  list-style-type: none;
+  border-bottom: 4px solid #32dac5 ;
+  transition:  0.1s linear;
+  border-radius: 5px;
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
   margin-top: 20vh;
-  margin-right: 0;
-  text-decoration: none;
-  color: #fff;
-  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
+/*________________________________*/
 button {
   margin: 20px;
-  text-decoration: none;
+  width: 200px;
   background-color: transparent;
   font-size: 25px;
   color: #000;
@@ -97,7 +91,7 @@ button:hover::after {
   width: calc(100% + 27px);
   height: calc(100% + 27px);
 }
-
+/*________________________________*/
 .loading {
   background-color: #fff;
   border-radius: 10px;
@@ -107,4 +101,8 @@ button:hover::after {
   line-height: 40px;
   margin: auto auto;
   margin-top: 300px;
+}
+/*________________________________*/
+p{
+  margin-top: 20px;
 }
