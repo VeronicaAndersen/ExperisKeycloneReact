@@ -8,10 +8,11 @@ const NavBar = () => {
             <nav>
                 <div className="container">
                     <div className="header">
-                                <Link to="/">Home</Link>
-                            {keycloak.authenticated && (
-                                    <Link to="/profile" id="profileLink">Profile</Link>
-                            )}
+                        <Link to="/">Home</Link>
+                        <Link to="/duck">Ducks</Link>
+                        {keycloak.authenticated && (
+                            <Link to="/profile" id="profileLink">Profile</Link>
+                        )}
                     </div>
                 </div>
             </nav>

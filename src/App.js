@@ -6,6 +6,7 @@ import Profile from './View/Profile/Profile';
 
 import KeycloakRoute from "./Routes/KeycloakRoute";
 import { ROLES } from "./Const/roles";
+import Duck from './View/Ducks/Duck';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<Login />} />
+          <Route path='/duck' element={<Duck />} />
           <Route
             path="/profile"
             element={
