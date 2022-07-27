@@ -1,7 +1,14 @@
+import keycloak from "../../Keycloak/keycloak"
+
 const Spotify = () => {
     return (
         <>
-            <h1>Spotify</h1>
+            {
+                keycloak.tokenParsed && 
+                <div>
+                    <p>Welcome {keycloak.tokenParsed.name}!</p>
+                </div>
+            }
         </>
         )
 }
