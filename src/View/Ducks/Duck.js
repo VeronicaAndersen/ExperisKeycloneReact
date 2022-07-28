@@ -15,10 +15,19 @@ const Duck = () => {
         fetchDuck()
     }, [])
 
+    function nextDuck() {
+        fetchDuck()
+    }
+
     return (
         <>
-            <img src={duck} alt="duck" />
-            <figcaption>Duck of the day</figcaption>
+            <button onClick={nextDuck}>Next</button>
+
+            <div>
+                <img src={duck} alt="duck" />
+                <figcaption>Duck of the day</figcaption>
+
+            </div>
         </>
     );
 };

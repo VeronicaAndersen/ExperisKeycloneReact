@@ -1,11 +1,17 @@
-import Spotify from "../../Components/Spotify/Spotify"
+import keycloak from "../../Keycloak/keycloak"
 
 
 const Profile = () => {
 
     return (
         <>
-            <Spotify />
+            {
+                keycloak.tokenParsed &&
+                <div>
+                    <p>Welcome {keycloak.tokenParsed.name}!</p>
+                </div>
+            }
+
         </>
     )
 }
