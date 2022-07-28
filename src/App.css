@@ -112,3 +112,12 @@ img{
   width: 300px;
   box-shadow: var(--shadow);
 }
+figcaption{
+  background-color: #fff;
+  width: 300px;
+  margin: auto auto;
+  box-shadow: var(--shadow);
+  height: 40px;
+  line-height: 40px;
+  margin-top: -3px;
+}

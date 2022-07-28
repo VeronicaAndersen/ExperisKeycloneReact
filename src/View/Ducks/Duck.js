@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 
-const Quote = () => {
+const Duck = () => {
 
-    const [quote, setQuote] = useState("");
+    const [duck, setDuck] = useState("");
     const url = 'https://random-d.uk/api/quack';
 
-    const fetchQuote = async () => {
+    const fetchDuck = async () => {
         const response = await fetch(url)
         const data = await response.json()
-        setQuote(data.url)
+        setDuck(data.url)
     }
 
     useEffect(() => {
-        fetchQuote()
+        fetchDuck()
     }, [])
 
     return (
         <>
-        <img src={quote} alt="duck" />
-            <p>{quote}</p>
+            <img src={duck} alt="duck" />
+            <figcaption>Duck of the day</figcaption>
         </>
     );
 };
 
-export default Quote
+export default Duck
